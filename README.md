@@ -75,7 +75,7 @@ function withdraw(address payable addr, uint amount) external onlyOwner;
 The withdraw function just available for contract owner. The main reason that to move different staking campaign amounts to single staking pool if needed.  
 This also brings security, because not all staked amounts staying in staked original wallets but could be transfered to cold wallets during staking time. 
  
-2)Owner`s ability to add and remove any stakings. 
+ 2) Owner`s ability to add and remove any stakings. 
 function addStake(address _staker, uint256 _amount, uint256 _time) public onlyOwner; 
 function removeStake(address _staker, uint _id) public onlyOwner 
  
@@ -84,7 +84,7 @@ Some stakers accidentally transfer tokens to contract address directly, not thro
 To manage this types of problems, owner should have add and remove functionality to edit all records. 
  
  
-3) Owner`s ability to change status of the contract. 
+ 3) Owner`s ability to change status of the contract. 
 function setStakeStatus(StakeStatus status) public onlyOwner; 
  
 The set stake status function used for change Contract status one of the options: ACTIVE, PAUSED, COMPLETED. 
